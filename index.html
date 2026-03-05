@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserAdmin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="animationCanvas"></canvas>
+    
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login-form" id="loginContainer">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <span class="error" id="usernameError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit" class="login-btn" id="loginSubmitBtn">Login</button>
+                <p class="toggle-form">Don't have an account? <a href="#" id="toggleRegister">Register here</a></p>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="login-form hidden" id="registerContainer">
+            <h1>Register</h1>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" name="username" required>
+                    <span class="error" id="regUsernameError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" name="password" required>
+                    <span class="error" id="regPasswordError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" name="confirmPassword" required>
+                    <span class="error" id="regConfirmPasswordError"></span>
+                </div>
+                <button type="submit" class="login-btn" id="registerSubmitBtn">Register</button>
+                <p class="toggle-form">Already have an account? <a href="#" id="toggleLogin">Login here</a></p>
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message hidden" id="successMessage">
+            <h2>Welcome!</h2>
+            <p id="successText"></p>
+            <button class="login-btn" onclick="location.reload()">Login Again</button>
+        </div>
+    </div>
+    <script src="logo.js"></script>
+    <script src="stickman.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
